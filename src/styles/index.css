@@ -45,21 +45,81 @@ h1 {
   font-size: 0.8rem;
 }
 
+/* Styles pour Firefox */
+/* Largeur de la barre de défilement */
+html {
+  scrollbar-width: thin;
+}
+
+/* Style de la poignée (la partie que vous faites glisser) pour Firefox */
+html::-moz-scrollbar-thumb {
+  background-color: #4caf50; /* Couleur de fond de la poignée */
+  border-radius: 6px; /* Coins arrondis de la poignée */
+}
+
+/* Style de la piste (la partie sur laquelle la poignée se déplace) pour Firefox */
+html::-moz-scrollbar-track {
+  background-color: #f1f1f1; /* Couleur de fond de la piste */
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  /* Largeur de la barre de défilement */
+  /* Style de la poignée (la partie que vous faites glisser) */
+  /* Style de la piste (la partie sur laquelle la poignée se déplace) */
+}
+html ::-webkit-scrollbar {
+  width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #b44fc8; /* Couleur de fond de la poignée */
+  border-radius: 2px; /* Coins arrondis de la poignée */
+}
+html ::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0); /* Couleur de fond de la piste */
+}
+
+body {
+  scrollbar-gutter: stable;
+}
+
+/* Changer la couleur de fond lors de la sélection */
+::-moz-selection {
+  background-color: rgba(52, 152, 219, 0.3843137255); /* Couleur de fond lors de la sélection */
+  color: #fff; /* Couleur du texte lors de la sélection */
+}
+::selection {
+  background-color: rgba(52, 152, 219, 0.3843137255); /* Couleur de fond lors de la sélection */
+  color: #fff; /* Couleur du texte lors de la sélection */
+}
+
+/* Changer la couleur de fond pour Firefox */
+::-moz-selection {
+  background-color: rgba(52, 152, 219, 0.5019607843);
+  color: #fff;
+}
+
 .navigation {
+  scrollbar-gutter: stable both-edges;
   background: rgb(247, 243, 238);
   -webkit-box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.21);
           box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.21);
   width: 100%;
+  position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 90px;
+  z-index: 2000;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .navigation .nav-container {
   max-width: 1200px;
-  height: 90px;
   width: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -128,6 +188,24 @@ h1 {
   left: 0;
 }
 
+.fixed-navigation {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  z-index: 2000;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.fixed-navigation .logo-text-container {
+  opacity: 0;
+}
+.fixed-navigation a img {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(0.5) !important;
+          transform: scale(0.5) !important;
+}
+
 .logo-container {
   height: inherit;
   top: 0;
@@ -150,12 +228,16 @@ h1 {
   color: black;
 }
 .logo-container .logo-img-container {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
   position: absolute;
   -webkit-transform: translateX(50px);
           transform: translateX(50px);
   z-index: 1000;
 }
 .logo-container .logo-img-container img {
+  -webkit-transition: 1s;
+  transition: 1s;
   width: 110px;
   opacity: 0.8;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -163,6 +245,8 @@ h1 {
 }
 .logo-container .logo-text-container {
   z-index: 1001;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: black;
   position: relative;
   font-family: Indie Flower;
@@ -220,8 +304,8 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%); /* Ajustez les valeurs selon vos besoins */
-  z-index: 2; /* Assurez-vous que le dégradé radial est au-dessus du flou */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%);
+  z-index: 2;
 }
 .header-container h2 {
   z-index: 1;
@@ -236,6 +320,7 @@ h1 {
   font-size: 1.5rem;
   -webkit-animation: pulse 10s linear infinite;
           animation: pulse 10s linear infinite;
+  margin: 1rem;
 }
 
 @-webkit-keyframes pulse {
@@ -326,12 +411,13 @@ h1 {
 
 .introduction-container {
   position: relative;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 .introduction-container::after {
   content: "● ● ● ● ● ●";
   left: 50%;
   bottom: 0;
+  opacity: 0.8;
   color: lightpink;
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
@@ -350,6 +436,7 @@ h1 {
 .introduction-container h2::before {
   content: "●";
   left: 0;
+  opacity: 0.6;
   color: aquamarine;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -360,6 +447,7 @@ h1 {
 }
 .introduction-container h2::after {
   content: "● ● ● ● ●";
+  opacity: 0.8;
   right: 0;
   color: aquamarine;
   margin: 0 auto;
@@ -367,6 +455,6 @@ h1 {
 }
 .introduction-container p {
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
   text-align: center;
 }/*# sourceMappingURL=index.css.map */

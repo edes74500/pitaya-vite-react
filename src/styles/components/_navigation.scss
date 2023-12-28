@@ -1,15 +1,16 @@
 .navigation {
-  // position: fixed;
-
-  // z-index: 4;
+  scrollbar-gutter: stable both-edges;
   background: rgb(247, 243, 238);
   box-shadow: -2px 4px 14px rgb(0 0 0 / 21%);
   width: 100%;
+  position: fixed;
   justify-content: center;
   display: flex;
+  height: 90px;
+  z-index: 2000;
+  transition: 1s;
   .nav-container {
     max-width: 1200px;
-    height: 90px;
     width: 100%;
     justify-content: flex-start;
     display: flex;
@@ -69,6 +70,23 @@
           // z-index: -1;
         }
       }
+    }
+  }
+}
+
+.fixed-navigation {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  z-index: 2000;
+  transition: 1s;
+  .logo-text-container {
+    opacity: 0;
+  }
+  a {
+    img {
+      transition: 1s;
+      transform: scale(0.5) !important;
     }
   }
 }
