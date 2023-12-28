@@ -1,0 +1,47 @@
+.logo-container {
+  //   position: absolute;
+  height: inherit;
+  top: 0;
+  left: 10px;
+  display: flex;
+  //   width: 200px;
+  align-items: center;
+  a {
+    display: flex;
+    color: black;
+  }
+  .logo-img-container {
+    position: absolute;
+    transform: translateX(50px);
+    z-index: 1000;
+    img {
+      width: 110px;
+      opacity: 0.8;
+    }
+  }
+  .logo-text-container {
+    z-index: 1001;
+    // height: 100vh;
+    // top: 10px;
+    color: black;
+    position: relative;
+    font-family: Indie Flower;
+    a {
+      flex-direction: column;
+      display: flex;
+      //   transform: translateY(-10px);
+    }
+    p {
+      text-decoration: none;
+      width: max-content;
+      //   line-height: 10px;
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      line-height: 10px;
+    }
+  }
+
+  user-select: none;
+}
