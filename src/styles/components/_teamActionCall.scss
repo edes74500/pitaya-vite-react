@@ -1,0 +1,61 @@
+.action-call-container {
+  font-family: Dosis;
+  position: relative;
+  min-height: 700px;
+  margin: 5rem 1rem;
+  //   background-image: url(/public/img/team-together.png);
+  //   background-size: 40%;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  &::before {
+    content: "";
+    background-image: url(/public/img/team-together.png);
+    background-image: url(/public/img/team-together.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.8;
+  }
+
+  & div:nth-child(1) {
+    top: -50px;
+    left: 0px;
+  }
+  & div:nth-child(2) {
+    top: 0;
+    right: -80px;
+  }
+  & div:nth-child(3) {
+    bottom: 0;
+    left: 0px;
+  }
+  & div:nth-child(4) {
+    bottom: 50px;
+    right: -120px;
+  }
+  .action-call-item {
+    position: absolute;
+    max-width: 200px;
+    .action-call-item-img {
+      //   position: absolute;
+      transform: translate(-40%, 100%);
+      opacity: 0.7;
+      span {
+        font-size: 4rem;
+      }
+    }
+    h3 {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 1.5rem;
+    }
+  }
+}

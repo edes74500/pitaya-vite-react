@@ -10,14 +10,14 @@ export default defineConfig({
     },
   },
 
-  server: {
-    proxy: {
-      // Configurations du proxy si nécessaire
-    },
-    // Ajoutez la configuration pour la gestion du routage SPA
-    hmr: {
-      overlay: false,
-    },
-    middlewareMode: true,
-  },
+  // server: {
+  //   proxy: {
+  //     // Configurations du proxy si nécessaire
+  //   },
+  //   // Ajoutez la configuration pour la gestion du routage SPA
+  //   hmr: {
+  //     overlay: false,
+  //   },
+  //   middlewareMode: true,
+  // },
 });

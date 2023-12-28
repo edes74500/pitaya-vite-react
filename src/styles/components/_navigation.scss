@@ -8,21 +8,23 @@
   justify-content: center;
   display: flex;
   .nav-container {
-    max-width: 800px;
+    max-width: 1200px;
     height: 90px;
-    width: 80%;
-    align-items: flex-start;
+    width: 100%;
+    justify-content: flex-start;
     display: flex;
     // justify-content: center;
-    gap: 100px;
+    gap: 150px;
     ul {
       display: flex;
       gap: 20px;
       align-items: center;
       height: inherit;
       a {
+        padding: 0 10px;
         font-weight: 500;
         font-size: 1.3rem;
+        letter-spacing: 2px;
         color: #140410bd;
         text-decoration: inherit;
         font-family: Dosis;

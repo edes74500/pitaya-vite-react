@@ -15,6 +15,8 @@ function App() {
       <Helmet>
         <title>Micro Creche Pitaya : votre creche a Besancon</title>
         <link rel="icon" type="image/png" href="/img/logo.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </Helmet>
       {/* Define routes using the Routes and Route components */}
       <Routes>
