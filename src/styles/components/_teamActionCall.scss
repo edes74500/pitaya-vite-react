@@ -1,13 +1,30 @@
+@media screen and (max-width: 900px) {
+  .action-call-container {
+    display: flex;
+    flex-direction: column;
+    &::before {
+      content: "";
+      background-image: none !important;
+    }
+    div {
+      max-width: 100% !important;
+      position: relative !important;
+      top: 0px !important;
+      left: 0 !important;
+    }
+  }
+
+  .action-call-item-img {
+    transform: translate(0%, 0%) !important;
+  }
+}
+
 .action-call-container {
   font-family: Dosis;
   position: relative;
   min-height: 600px;
   max-width: 700px;
-  margin: 5rem auto;
-  //   background-image: url(/public/img/team-together.png);
-  //   background-size: 40%;
-  //   background-repeat: no-repeat;
-  //   background-position: center center;
+  margin: 100px auto;
   &::before {
     content: "";
     background-image: url(/public/img/team-together.png);
@@ -41,10 +58,15 @@
   }
   .action-call-item {
     position: absolute;
+    display: flex;
+    margin: 20px 10px;
     max-width: 200px;
+    -webkit-filter: drop-shadow(1px 1px 0px #22222228);
+    filter: drop-shadow(0px 0px 1px #22222228);
     .action-call-item-img {
-      //   position: absolute;
-      transform: translate(-40%, 100%);
+      position: absolute;
+      // display: inline-block;
+      transform: translate(-130%, 150%);
       opacity: 0.7;
       span {
         font-size: 4rem;

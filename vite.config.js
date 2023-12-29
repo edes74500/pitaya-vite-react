@@ -9,15 +9,16 @@ export default defineConfig({
       assets: "./src/assets", // Utilisez des chemins relatifs plutôt que des chemins absolus
     },
   },
-
-  // server: {
-  //   proxy: {
-  //     // Configurations du proxy si nécessaire
-  //   },
-  //   // Ajoutez la configuration pour la gestion du routage SPA
-  //   hmr: {
-  //     overlay: false,
-  //   },
-  //   middlewareMode: true,
-  // },
+  server: {
+    host: "0.0.0.0", // Écoute sur toutes les adresses IPv4 de la machine locale.
+    // Vous pouvez ajouter d'autres configurations de serveur ici, comme le proxy ou les options HMR
+    // Exemple de configuration HMR
+    hmr: {
+      overlay: false,
+    },
+    // Exemple de configuration de proxy
+    // proxy: {
+    //   '/api': 'http://localhost:5000',
+    // },
+  },
 });
