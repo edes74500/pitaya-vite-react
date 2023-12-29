@@ -1,6 +1,7 @@
 .introduction-container {
   position: relative;
   padding: 20px 0;
+  //   max-width: 800px;
   &::after {
     content: "● ● ● ● ● ●";
     left: 50%;

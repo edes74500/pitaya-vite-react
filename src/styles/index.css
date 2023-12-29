@@ -103,6 +103,7 @@ body {
 .navigation {
   scrollbar-gutter: stable both-edges;
   background: rgb(247, 243, 238);
+  background: whitesmoke;
   -webkit-box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.21);
           box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.21);
   width: 100%;
@@ -355,8 +356,9 @@ body {
 .action-call-container {
   font-family: Dosis;
   position: relative;
-  min-height: 700px;
-  margin: 5rem 1rem;
+  min-height: 600px;
+  max-width: 700px;
+  margin: 5rem auto;
 }
 .action-call-container::before {
   content: "";
@@ -373,7 +375,7 @@ body {
   opacity: 0.8;
 }
 .action-call-container div:nth-child(1) {
-  top: -50px;
+  top: -80px;
   left: 0px;
 }
 .action-call-container div:nth-child(2) {

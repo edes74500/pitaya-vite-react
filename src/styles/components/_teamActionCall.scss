@@ -1,8 +1,9 @@
 .action-call-container {
   font-family: Dosis;
   position: relative;
-  min-height: 700px;
-  margin: 5rem 1rem;
+  min-height: 600px;
+  max-width: 700px;
+  margin: 5rem auto;
   //   background-image: url(/public/img/team-together.png);
   //   background-size: 40%;
   //   background-repeat: no-repeat;
@@ -23,7 +24,7 @@
   }
 
   & div:nth-child(1) {
-    top: -50px;
+    top: -80px;
     left: 0px;
   }
   & div:nth-child(2) {
