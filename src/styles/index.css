@@ -13,6 +13,7 @@
 }
 
 body {
+  background-image: linear-gradient(-20deg, rgba(225, 206, 255, 0.4117647059) 0%, rgba(251, 252, 219, 0.3137254902) 100%);
   min-height: 100vh;
   width: 100%;
   -webkit-box-pack: center;
@@ -32,17 +33,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color: rgba(255, 255, 255, 0.87);
-}
-
-.content-container {
-  padding: 3rem 1rem;
-  max-width: 1000px;
-  width: 90%;
-  margin: auto;
-  background-color: white;
-  color: black;
-  font-family: poppins;
-  font-size: 0.8rem;
 }
 
 /* Styles pour Firefox */
@@ -102,8 +92,7 @@ body {
 
 .navigation {
   scrollbar-gutter: stable both-edges;
-  background: rgb(247, 243, 238);
-  background: whitesmoke;
+  background-image: linear-gradient(-225deg, #f0fefa 0%, rgb(255, 249, 255) 0%);
   -webkit-box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.21);
           box-shadow: -2px 4px 14px rgba(0, 0, 0, 0.21);
   width: 100%;
@@ -274,9 +263,11 @@ body {
 }
 
 .header-container {
-  width: 100%;
+  width: 80%;
   min-height: 600px;
   background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,21 +288,38 @@ body {
   font-variation-settings: "wdth" 75, "wght" 900;
   text-align: center;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3411764706), 1px -1px 0 rgba(0, 0, 0, 0.3411764706), -1px 1px 0 rgba(0, 0, 0, 0.3411764706), 1px 1px 0 rgba(0, 0, 0, 0.3411764706);
+  border-radius: 0% 100% 50% 50%/75% 47% 53% 25%;
+  overflow: hidden;
+  -webkit-mask-size: 40% 100%;
+          mask-size: 40% 100%;
 }
-.header-container::after {
+@media screen and (max-width: 700px) {
+  .header-container {
+    width: 100%;
+    -webkit-mask-size: 50% 100%;
+            mask-size: 50% 100%;
+    min-height: 500px;
+  }
+}
+.header-container::before {
   content: "";
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%);
-  z-index: 2;
+  pointer-events: none; /* Pour permettre les clics à travers la vignette */
+  background: radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.6) 100%);
 }
 .header-container h2 {
   z-index: 1;
   font-size: 4rem;
   margin: 0.5rem;
+}
+@media screen and (max-width: 700px) {
+  .header-container h2 {
+    font-size: 2.5rem;
+  }
 }
 .header-container h3 {
   z-index: 1;
@@ -322,6 +330,11 @@ body {
   -webkit-animation: pulse 10s linear infinite;
           animation: pulse 10s linear infinite;
   margin: 1rem;
+}
+@media screen and (max-width: 700px) {
+  .header-container h3 {
+    font-size: 1rem;
+  }
 }
 
 @-webkit-keyframes pulse {
@@ -471,6 +484,7 @@ body {
   width: 220px;
 }
 .polaroid-container .polaroid-box-hover .polaroid-frame {
+  cursor: pointer;
   padding: clamp(6px, 5%, 14px);
   padding-bottom: clamp(24px, 25%, 25px);
   background-color: hsl(0, 0%, 90%);
@@ -588,6 +602,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  color: black;
+  font-family: poppins;
+  font-size: 0.8rem;
 }
 @media screen and (max-width: 800px) {
   .content-container {
@@ -625,7 +647,9 @@ body {
   }
 }
 .content-container .text-content-image-container img {
-  width: 100%;
-  border-radius: 400px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 100%;
+  height: 100%;
   float: left;
 }/*# sourceMappingURL=index.css.map */

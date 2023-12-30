@@ -158,6 +158,7 @@
     width: 220px;
 
     .polaroid-frame {
+      cursor: pointer;
       padding: clamp(6px, 5%, 14px);
       padding-bottom: clamp(24px, 25%, 25px);
       background-color: hsla(0, 0%, 90%, 1);

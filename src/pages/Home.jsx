@@ -1,10 +1,16 @@
 // import React from "react";
+import { motion } from "framer-motion";
+import PageTransition from "../components/layout/PageTransition";
 
 const Home = () => {
   return (
-    <div>
-      <h1>welcome to Pitaya</h1>
-    </div>
+    <PageTransition>
+      <div
+      // variants={pageTransition}
+      >
+        <h1>welcome to Pitaya</h1>
+      </div>
+    </PageTransition>
   );
 };
 

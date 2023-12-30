@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 // /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer"; // Make sure to import useInView from react-intersection-observer
 
 const TextContent = (props) => {
   const [randomColor, setRandomColor] = React.useState(Array(3).fill(200));
@@ -93,18 +95,40 @@ const TextContent = (props) => {
     }
   `;
 
+  const variants = {
+    hidden: { opacity: 0, x: props.reverseImg ? 200 : -200 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const controls = useAnimation();
+  const [contentContainer] = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+    onChange: (inView) => {
+      if (inView) {
+        controls.start("visible");
+      }
+    },
+  });
+
   return (
-    <div className="content-container">
+    <motion.div ref={contentContainer} className="content-container" variants={variants} initial="hidden" animate={controls}>
       <div className="introduction-container" css={containerCSS}>
         <h2 css={h2CSS}>{props.title}</h2>
         <p>{props.p}</p>
       </div>
       {props.img && (
-        <div className="text-content-image-container" css={imgCSS}>
+        <div className="text-content-image-container" css={imgCSS} style={{ order: props.reverseImg ? -1 : 1 }}>
           <img src={props.img} alt={props.title} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
