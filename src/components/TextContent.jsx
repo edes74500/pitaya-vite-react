@@ -6,7 +6,7 @@ const TextContent = (props) => {
   const [randomColor, setRandomColor] = useState(Array(3).fill(200));
   const [browserWidth, setBrowserWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0);
   const variants = {
-    hidden: { opacity: 0, x: props.reverseImg ? 200 : -200 },
+    hidden: { opacity: 0, x: props.reverseImg ? (browserWidth > 700 ? 200 : 50) : browserWidth > 700 ? -200 : -50 },
     visible: {
       opacity: 1,
       x: 0,
