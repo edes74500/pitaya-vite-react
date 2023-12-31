@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/navigation/Navigation";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Team from "./pages/Team.jsx";
@@ -10,6 +10,19 @@ import OurValues from "./pages/OurValues.jsx";
 // import "@fontsource/poppins";
 
 function App() {
+  const imageFolder = "./img/page-header/";
+  const imageFileNames = [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg",
+    // Ajoutez d'autres noms de fichiers d'images ici
+  ];
+
+  imageFileNames.forEach((fileName) => {
+    const img = new Image();
+    img.src = `${imageFolder}${fileName}`;
+  });
+
   return (
     <BrowserRouter>
       <AnimatePresence>

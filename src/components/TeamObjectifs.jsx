@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { teamActionCallList } from "./Data/TeamActionCall";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer"; // Make sure to import useInView from react-intersection-observer
 
-const TeamActionCall = () => {
+const TeamObjectifs = (props) => {
   const controls = useAnimation();
 
   const [teamActionDiv] = useInView({
@@ -38,12 +37,10 @@ const TeamActionCall = () => {
 
   return (
     <motion.div ref={teamActionDiv} className="action-call-container" variants={container} initial="hidden" animate={controls}>
-      {teamActionCallList.map((item, index) => (
+      {props.list.map((item, index) => (
         <motion.div className="action-call-item" style={{ color: item.color }} key={index} variants={itemAnim}>
-          <div className="action-call-item-img">
-            <span className="material-symbols-outlined">{item.icon}</span>
-          </div>
           <div className="action-call-item-text">
+            <span className="action-call-item-icone material-symbols-outlined">{item.icon}</span>
             <h3>{item.id}</h3>
             <p>{item.content}</p>
           </div>
@@ -53,4 +50,4 @@ const TeamActionCall = () => {
   );
 };
 
-export default TeamActionCall;
+export default TeamObjectifs;

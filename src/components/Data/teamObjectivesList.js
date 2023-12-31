@@ -1,4 +1,4 @@
-export const teamActionCallList = [
+export const teamObjectivesList = [
   {
     id: "01.",
     icon: "mood",

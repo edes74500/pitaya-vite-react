@@ -1,5 +1,5 @@
 import React from "react";
-import { teamList } from "./Data/TeamList";
+import { teamList } from "./data/teamList";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer"; // Make sure to import useInView from react-intersection-observer
 

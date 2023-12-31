@@ -1,11 +1,5 @@
 @media screen and (max-width: 900px) {
   .action-call-container {
-    display: flex;
-    flex-direction: column;
-    &::before {
-      content: "";
-      background-image: none !important;
-    }
     div {
       max-width: 100% !important;
       position: relative !important;
@@ -25,6 +19,10 @@
   min-height: 600px;
   max-width: 700px;
   margin: 100px auto;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
   &::before {
     content: "";
     background-image: url(/public/img/team-together.png);
@@ -38,6 +36,9 @@
     bottom: 0px;
     left: 0px;
     opacity: 0.8;
+    @media screen and (max-width: 900px) {
+      background-image: none;
+    }
   }
 
   & div:nth-child(1) {
@@ -63,22 +64,32 @@
     max-width: 200px;
     -webkit-filter: drop-shadow(1px 1px 0px #22222228);
     filter: drop-shadow(0px 0px 1px #22222228);
-    .action-call-item-img {
-      position: absolute;
-      // display: inline-block;
-      transform: translate(-130%, 150%);
-      opacity: 0.7;
-      span {
-        font-size: 4rem;
+    @media screen and (max-width: 900px) {
+      width: 90%;
+      margin: auto;
+    }
+    .action-call-item-text {
+      @media screen and (max-width: 900px) {
+        width: 90%;
       }
-    }
-    h3 {
-      font-size: 4rem;
-      font-weight: 900;
-    }
-    p {
-      font-size: 2rem;
-      line-height: 1.5rem;
+      .action-call-item-icone {
+        position: absolute;
+        transform: translate(-120%, 50%);
+        opacity: 0.7;
+        font-size: 5rem;
+        @media screen and (max-width: 900px) {
+          transform: translate(0%, 0%);
+          right: 0;
+        }
+      }
+      h3 {
+        font-size: 4rem;
+        font-weight: 900;
+      }
+      p {
+        font-size: 2rem;
+        line-height: 1.5rem;
+      }
     }
   }
 }

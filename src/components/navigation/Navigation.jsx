@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
+import Logo from "../common/Logo";
 
 const Navigation = () => {
   const [navHeight, setNavHeight] = React.useState(0);
