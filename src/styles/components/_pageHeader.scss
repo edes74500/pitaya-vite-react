@@ -1,75 +1,80 @@
-.header-container {
-  width: 80%;
-  min-height: 600px;
-  background-position: center center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // background-attachment: fixed;
-  @include verticalCenter;
-  flex-direction: column;
-  color: white;
+.header-wrapper {
+  display: flex;
   position: relative;
-  font-family: "Dosis Variable", sans-serif;
-  font-variation-settings: "wdth" 75, "wght" 900;
-  text-align: center;
-  text-shadow: -1px -1px 0 #00000057, 1px -1px 0 #00000057, -1px 1px 0 #00000057, 1px 1px 0 #00000057;
-  border-radius: 0% 100% 50% 50% / 75% 47% 53% 25%;
-  // -webkit-clip-path: url(#waveClipPath);
-  // clip-path: url(#waveClipPath);
-  // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.61));
+  width: 100%;
+  .header-container {
+    width: 80%;
+    min-height: 600px;
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+    @include verticalCenter;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    font-family: "Dosis Variable", sans-serif;
+    font-variation-settings: "wdth" 75, "wght" 900;
+    text-align: center;
+    text-shadow: -1px -1px 0 #00000057, 1px -1px 0 #00000057, -1px 1px 0 #00000057, 1px 1px 0 #00000057;
+    border-radius: 0% 100% 50% 50% / 75% 47% 53% 25%;
+    // -webkit-clip-path: url(#waveClipPath);
+    // clip-path: url(#waveClipPath);
+    // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.61));
 
-  // mask-image: url(./img/mask/mask5.png);
-  overflow: hidden;
-  // mask-repeat: no-repeat;
-  mask-size: 40% 100%;
-  @media screen and (max-width: 700px) {
-    // border-radius: 0% 0% 25% 20% / 0% 17% 13% 15%;
-    width: 100%;
-    mask-size: 50% 100%;
-    min-height: 500px;
-  }
-  // fill: "transparent";
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none; /* Pour permettre les clics à travers la vignette */
-    background: radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.6) 100%);
-  }
-  h2 {
-    z-index: 1;
-    font-size: 4rem;
-    margin: 0.5rem;
+    // mask-image: url(./img/mask/mask5.png);
+    overflow: hidden;
+    // mask-repeat: no-repeat;
+    mask-size: 40% 100%;
     @media screen and (max-width: 700px) {
-      font-size: 2.5rem;
+      // border-radius: 0% 0% 25% 20% / 0% 17% 13% 15%;
+      width: 100%;
+      mask-size: 50% 100%;
+      min-height: 500px;
+    }
+    // fill: "transparent";
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none; /* Pour permettre les clics à travers la vignette */
+      background: radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.6) 100%);
+    }
+    h2 {
+      z-index: 1;
+      font-size: 4rem;
+      margin: 0.5rem;
+      @media screen and (max-width: 700px) {
+        font-size: 2.5rem;
+      }
+    }
+    h3 {
+      z-index: 1;
+      font-family: "poppins";
+      font-weight: 500;
+      font-style: italic;
+      font-size: 1.5rem;
+      animation: pulse 10s linear infinite;
+      margin: 1rem;
+      @media screen and (max-width: 700px) {
+        font-size: 1rem;
+      }
+      // font-variation-settings: "wdth" 100, "wght" 900;
     }
   }
-  h3 {
-    z-index: 1;
-    font-family: "poppins";
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.5rem;
-    animation: pulse 10s linear infinite;
-    margin: 1rem;
-    @media screen and (max-width: 700px) {
-      font-size: 1rem;
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
     }
-    // font-variation-settings: "wdth" 100, "wght" 900;
-  }
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }

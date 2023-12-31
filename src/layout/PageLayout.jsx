@@ -1,14 +1,17 @@
-import React from "react";
 import PageTransition from "../components/layout/PageTransition";
 import PageHeader from "../components/PageHeader";
+import MovingDiv from "../components/common/MovingDiv";
 
 const PageLayout = ({ page, titleh2, titleh3, children }) => {
-  // Dont forget to put the image in public/img/page-header with the name of the page . jpg
   return (
     <PageTransition>
       <div className={`${page}-page-content`}>
-        <PageHeader page={page} img={`${page}.jpg`} titleh2={titleh2} titleh3={titleh3} />
-        {children}
+        <div className="page-wrapper">
+          <PageHeader page={page} img={`${page}.jpg`} titleh2={titleh2} titleh3={titleh3} />
+          {children}
+          <MovingDiv position={`footer`} />
+          <MovingDiv position={`header`} />
+        </div>
       </div>
     </PageTransition>
   );

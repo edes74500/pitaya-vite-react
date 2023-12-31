@@ -1,0 +1,86 @@
+.page-wrapper {
+  .header-span-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .header-span {
+      opacity: 0.5;
+      height: 600px;
+      width: 600px;
+      background-color: red;
+      border-radius: 34% 66% 52% 48% / 47% 62% 38% 53%;
+      z-index: -1;
+      position: absolute;
+      right: -10vmin;
+      animation: morph 20s linear infinite alternate, spin 25s linear infinite reverse;
+      @media screen and (max-width: 800px) {
+        height: 500px;
+        width: 500px;
+        top: 20px;
+      }
+    }
+  }
+  position: relative;
+  overflow: hidden;
+  .footer-span-container {
+    position: absolute;
+    // color: red;
+    font-size: 90rem;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, 20%) !important;
+    .footer-span {
+      opacity: 0.15;
+      height: 600px;
+      width: 600px;
+      @media screen and (max-width: 800px) {
+        height: 500px;
+        width: 500px;
+        bottom: -50px;
+      }
+      background-color: red;
+      border-radius: 34% 66% 52% 48% / 47% 62% 38% 53%;
+      z-index: -1;
+      position: absolute;
+      // right: -10vmin;
+      // top: 0;
+      // transform: translate(-50%, -45%);
+      animation: morph 20s linear infinite alternate, spin 40s linear infinite reverse;
+      // transform-origin: -5% -4%;
+    }
+  }
+  @keyframes morph {
+    0% {
+      // border-radius: 40% 60% 60% 40%/70% 30%;
+      border-radius: 34% 66% 52% 48% / 47% 62% 38% 53%;
+    }
+    100% {
+      // border-radius: 40% 60%;
+      border-radius: 77% 23% 30% 70% / 64% 62% 38% 36%;
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0) translateX(0) translateY(0px);
+    }
+    50% {
+      transform: rotate(1turn) translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: rotate(2turn) translateX(0) translateY(0px);
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px); /* Déplacez la div de 10 pixels vers la droite */
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@font-face {
-  font-family: "Dosis";
-  src: url("../assets/fonts/Dosis/Dosis-VariableFont_wght.ttf") format("truetype"); /* Ajoutez les autres formats si nécessaire */
-}
 * {
   padding: 0;
   margin: 0;
@@ -90,6 +86,137 @@ body {
   color: #fff;
 }
 
+.team-page-content {
+  overflow: hidden;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.page-wrapper .header-span-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-wrapper .header-span-container .header-span {
+  opacity: 0.5;
+  height: 600px;
+  width: 600px;
+  background-color: red;
+  border-radius: 34% 66% 52% 48%/47% 62% 38% 53%;
+  z-index: -1;
+  position: absolute;
+  right: -10vmin;
+  animation: morph 20s linear infinite alternate, spin 25s linear infinite reverse;
+}
+@media screen and (max-width: 800px) {
+  .page-wrapper .header-span-container .header-span {
+    height: 500px;
+    width: 500px;
+    top: 20px;
+  }
+}
+.page-wrapper .footer-span-container {
+  position: absolute;
+  font-size: 90rem;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  -webkit-transform: translate(-50%, 20%) !important;
+          transform: translate(-50%, 20%) !important;
+}
+.page-wrapper .footer-span-container .footer-span {
+  opacity: 0.15;
+  height: 600px;
+  width: 600px;
+  background-color: red;
+  border-radius: 34% 66% 52% 48%/47% 62% 38% 53%;
+  z-index: -1;
+  position: absolute;
+  animation: morph 20s linear infinite alternate, spin 40s linear infinite reverse;
+}
+@media screen and (max-width: 800px) {
+  .page-wrapper .footer-span-container .footer-span {
+    height: 500px;
+    width: 500px;
+    bottom: -50px;
+  }
+}
+@-webkit-keyframes morph {
+  0% {
+    border-radius: 34% 66% 52% 48%/47% 62% 38% 53%;
+  }
+  100% {
+    border-radius: 77% 23% 30% 70%/64% 62% 38% 36%;
+  }
+}
+@keyframes morph {
+  0% {
+    border-radius: 34% 66% 52% 48%/47% 62% 38% 53%;
+  }
+  100% {
+    border-radius: 77% 23% 30% 70%/64% 62% 38% 36%;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0px);
+            transform: rotate(0) translateX(0) translateY(0px);
+  }
+  50% {
+    -webkit-transform: rotate(1turn) translateX(0px) translateY(0px);
+            transform: rotate(1turn) translateX(0px) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(2turn) translateX(0) translateY(0px);
+            transform: rotate(2turn) translateX(0) translateY(0px);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0px);
+            transform: rotate(0) translateX(0) translateY(0px);
+  }
+  50% {
+    -webkit-transform: rotate(1turn) translateX(0px) translateY(0px);
+            transform: rotate(1turn) translateX(0px) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(2turn) translateX(0) translateY(0px);
+            transform: rotate(2turn) translateX(0) translateY(0px);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); /* Déplacez la div de 10 pixels vers la droite */
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); /* Déplacez la div de 10 pixels vers la droite */
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .navigation {
   scrollbar-gutter: stable both-edges;
   background-image: linear-gradient(-225deg, rgba(240, 254, 250, 0.8784313725) 0%, rgba(255, 249, 255, 0.9) 0%);
@@ -136,7 +263,7 @@ body {
   letter-spacing: 2px;
   color: rgba(20, 4, 16, 0.7411764706);
   text-decoration: inherit;
-  font-family: Dosis;
+  font-family: Dosis Variable;
   position: relative;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
@@ -263,7 +390,14 @@ body {
   line-height: 10px;
 }
 
-.header-container {
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.header-wrapper .header-container {
   width: 80%;
   min-height: 600px;
   background-position: center center;
@@ -295,14 +429,14 @@ body {
           mask-size: 40% 100%;
 }
 @media screen and (max-width: 700px) {
-  .header-container {
+  .header-wrapper .header-container {
     width: 100%;
     -webkit-mask-size: 50% 100%;
             mask-size: 50% 100%;
     min-height: 500px;
   }
 }
-.header-container::before {
+.header-wrapper .header-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -312,17 +446,17 @@ body {
   pointer-events: none; /* Pour permettre les clics à travers la vignette */
   background: radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.6) 100%);
 }
-.header-container h2 {
+.header-wrapper .header-container h2 {
   z-index: 1;
   font-size: 4rem;
   margin: 0.5rem;
 }
 @media screen and (max-width: 700px) {
-  .header-container h2 {
+  .header-wrapper .header-container h2 {
     font-size: 2.5rem;
   }
 }
-.header-container h3 {
+.header-wrapper .header-container h3 {
   z-index: 1;
   font-family: "poppins";
   font-weight: 500;
@@ -333,11 +467,10 @@ body {
   margin: 1rem;
 }
 @media screen and (max-width: 700px) {
-  .header-container h3 {
+  .header-wrapper .header-container h3 {
     font-size: 1rem;
   }
 }
-
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -352,7 +485,6 @@ body {
             transform: scale(1);
   }
 }
-
 @keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -367,6 +499,7 @@ body {
             transform: scale(1);
   }
 }
+
 @media screen and (max-width: 900px) {
   .action-call-container div {
     max-width: 100% !important;
@@ -380,7 +513,7 @@ body {
   }
 }
 .action-call-container {
-  font-family: Dosis;
+  font-family: Dosis Variable;
   position: relative;
   min-height: 600px;
   max-width: 700px;
@@ -473,10 +606,6 @@ body {
 .action-call-container .action-call-item .action-call-item-text p {
   font-size: 2rem;
   line-height: 1.5rem;
-}
-
-.team-page-content {
-  overflow: hidden;
 }
 
 .polaroid-container {

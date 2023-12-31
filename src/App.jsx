@@ -1,27 +1,27 @@
 import "./styles/index.scss";
-import Navigation from "./components/navigation/Navigation";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Team from "./pages/Team.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { AnimatePresence } from "framer-motion";
+import Navigation from "./components/navigation/Navigation";
+import Home from "./pages/Home.jsx";
+import Team from "./pages/Team.jsx";
 import OurValues from "./pages/OurValues.jsx";
 // import "@fontsource-variable/dosis";
 // import "@fontsource/poppins";
 
 function App() {
-  const imageFolder = "./img/page-header/";
-  const imageFileNames = [
-    "our-values.jpg",
-    "team.jpg",
-    "team2.jpg",
-    // Ajoutez d'autres noms de fichiers d'images ici
-  ];
+  // const imageFolder = "./img/page-header/";
+  // const imageFileNames = [
+  //   "our-values.jpg",
+  //   "team.jpg",
+  //   "team2.jpg",
+  //   // Ajoutez d'autres noms de fichiers d'images ici
+  // ];
 
-  imageFileNames.forEach((fileName) => {
-    const img = new Image();
-    img.src = `${imageFolder}${fileName}`;
-  });
+  // imageFileNames.forEach((fileName) => {
+  //   const img = new Image();
+  //   img.src = `${imageFolder}${fileName}`;
+  // });
 
   return (
     <BrowserRouter>
