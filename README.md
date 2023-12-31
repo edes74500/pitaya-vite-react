@@ -28,3 +28,4 @@
 - [ ] barre navigation mobile
 - [ ] creer des spans dynamique random color et les mettre en fixe avec opacite faible sur le header et en bas de page
 - [ ] creer un composant gallerie (en map) et un composant image avec possibilite de mettre full screen au click (la taille sera gerer en css plus tard)
+- [ ] sortir les data de team
