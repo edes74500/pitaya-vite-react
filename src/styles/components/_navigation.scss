@@ -162,7 +162,10 @@
       flex-direction: column;
     }
   }
-
+  a:active {
+    font-size: 3rem !important;
+    transition: 0ms;
+  }
   .logo-text-container {
     opacity: 0;
   }
@@ -186,10 +189,11 @@
     // height: inherit;
 
     top: 0;
-    right: 0;
+    right: 15px;
     .navigation-bar {
       &:nth-child(2) {
         opacity: 0;
+        transform: translateX(10px);
       }
       &:nth-child(1) {
         transform: rotate(-45deg);
@@ -218,7 +222,7 @@
   transform: translate(0, 50%);
   // height: inherit;
   top: 0;
-  right: 0;
+  right: 15px;
   .navigation-bar {
     width: 28px;
     height: 5px;

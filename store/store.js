@@ -17,3 +17,7 @@ const reducer = (state = initialState, action) => {
 export const store = configureStore({
   reducer,
 });
+
+//IMPORTANT : Recuperer sur un composant de l'application
+//import { useSelector } from "react-redux";
+//const headerColorRGBA = useSelector((state) => state.headerColorRGBA);

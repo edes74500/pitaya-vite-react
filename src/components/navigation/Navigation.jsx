@@ -7,12 +7,11 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    const navBar = document.querySelector(".nav-wrapper");
+    if (window.scrollY > navBar.offsetHeight / 2) {
       setIsScrolled(true);
-      console.log("scoll on");
     } else {
       setIsScrolled(false);
-      console.log(`scroll off`);
     }
   };
 
@@ -27,15 +26,6 @@ const Navigation = () => {
   const [navWidth, setNavWidth] = React.useState(window.innerWidth);
   const [onMobile, setOnMobile] = React.useState(false);
   const [isMobileNavOpen, SetisMobileNavOpen] = React.useState(false);
-
-  // const [navHeight, setNavHeight] = React.useState(0);
-  // const [navFixed, setNavFixed] = React.useState(false);
-
-  // const navigation = document.getElementsByClassName("navigation");
-
-  // useEffect(() => {
-  //   setNavHeight(navigation[0].offsetHeight);
-  // }, []);
 
   // MET A JOUR LA WIDTH DE LA NAVIGATION
   const handleResize = () => {
@@ -60,7 +50,7 @@ const Navigation = () => {
   };
 
   const closeMobileNav = () => {
-    SetisMobileNavOpen(false);
+    setTimeout(() => SetisMobileNavOpen(false), 200);
   };
 
   useEffect(() => {
