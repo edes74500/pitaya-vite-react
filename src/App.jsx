@@ -12,9 +12,9 @@ import OurValues from "./pages/OurValues.jsx";
 function App() {
   const imageFolder = "./img/page-header/";
   const imageFileNames = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg",
+    "our-values.jpg",
+    "team.jpg",
+    "team2.jpg",
     // Ajoutez d'autres noms de fichiers d'images ici
   ];
 
