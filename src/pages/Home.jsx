@@ -1,6 +1,6 @@
 // import React from "react";
 import { motion } from "framer-motion";
-import PageTransition from "../components/layout/PageTransition";
+import PageTransition from "../layout/PageTransition";
 
 const Home = () => {
   return (

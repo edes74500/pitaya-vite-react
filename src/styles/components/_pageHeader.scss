@@ -1,15 +1,32 @@
+//big header variable{
+$margin-top: 50px;
+$max-width: 900px;
+$min-heigth: 600px;
+
+//smaller header
+$margin-top: 80px;
+$max-width: 500px;
+$min-heigth: 300px;
+
 .header-wrapper {
   display: flex;
   position: relative;
   width: 100%;
+  margin-top: $margin-top;
   .header-container {
-    width: 80%;
-    min-height: 600px;
+    width: 90%;
+    max-width: 500px;
+    max-width: $max-width;
+    justify-content: center;
+    margin: auto;
+    min-height: 300px;
+    min-height: $min-heigth;
     background-position: center center;
+    box-shadow: -10px 16px 20px 6px rgb(0 0 0 / 30%);
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-
+    // border: rgb(0, 0, 0) 5px solid;
     // background-attachment: fixed;
     @include verticalCenter;
     flex-direction: column;
@@ -19,7 +36,9 @@
     font-variation-settings: "wdth" 75, "wght" 900;
     text-align: center;
     text-shadow: -1px -1px 0 #00000057, 1px -1px 0 #00000057, -1px 1px 0 #00000057, 1px 1px 0 #00000057;
-    border-radius: 0% 100% 50% 50% / 75% 47% 53% 25%;
+    border-radius: 90% 10% 88% 12% / 24% 70% 30% 76%;
+    border-radius: 69% 31% 64% 36% / 28% 60% 40% 72%;
+
     overflow: hidden;
     transition: 1s;
 
@@ -29,6 +48,7 @@
       mask-size: 50% 100%;
       min-height: 500px;
     }
+
     // fill: "transparent";
     &::before {
       content: "";

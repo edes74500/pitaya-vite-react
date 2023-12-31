@@ -10,7 +10,7 @@ const TeamPolaroid = ({ list }) => {
 
   const [polaroidDivContainer] = useInView({
     triggerOnce: true,
-    threshold: 0.001,
+    threshold: 0.2,
     onChange: (inView) => {
       if (inView) {
         controls.start("visible");

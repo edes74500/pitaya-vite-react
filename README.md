@@ -17,6 +17,8 @@
 - [x] enlever les afters et les passer en span dynamique ?
 - [x] sortir le css de textContent
 - [x] creer des spans dynamique random color et les mettre en fixe avec opacite faible sur le header et en bas de page _ajouter sur le page layout_
+- [x] sortir les data de team
+- [x] barre navigation mobile
 
 # to do :
 
@@ -28,6 +30,4 @@
 - [ ] Partout : bouton inscription / decouvrir la creche / l'equipe etc
 - [ ] creer un formulaire d'inscription avec envoi de donnees
 - [ ] Nos Valeurs : changer les valeurs avec des icones ou un carrousel ? https://optitmome.com/ / stacks photo / position sticky
-- [ ] barre navigation mobile
 - [ ] creer un composant gallerie (en map) et un composant image avec possibilite de mettre full screen au click (la taille sera gerer en css plus tard)
-- [ ] sortir les data de team

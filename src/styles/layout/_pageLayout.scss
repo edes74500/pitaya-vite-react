@@ -4,7 +4,10 @@
     top: 0;
     right: 0;
     .header-span {
-      opacity: 0.2;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      image-rendering: auto;
+      opacity: 0.4;
       height: 600px;
       width: 600px;
       background-color: red;
@@ -12,7 +15,7 @@
       z-index: -1;
       position: absolute;
       right: -10vmin;
-      animation: morph 20s linear infinite alternate, spin 25s linear infinite reverse;
+      animation: morph 20s linear infinite alternate, spin 49s linear infinite reverse;
       @media screen and (max-width: 800px) {
         height: 500px;
         width: 500px;
@@ -32,6 +35,9 @@
     height: 600px;
     transform: translate(-50%, 20%) !important;
     .footer-span {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      image-rendering: auto;
       opacity: 0.15;
       height: 600px;
       width: 600px;
@@ -40,7 +46,6 @@
         width: 500px;
         bottom: -50px;
       }
-      background-color: red;
       border-radius: 34% 66% 52% 48% / 47% 62% 38% 53%;
       z-index: -1;
       position: absolute;

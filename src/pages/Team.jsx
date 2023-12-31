@@ -8,13 +8,18 @@ import PageLayout from "../layout/PageLayout";
 
 const Team = () => {
   return (
-    <PageLayout page="team" titleh2="Notre equipe" titleh3="Créer une dynamique d'équipe dans laquelle chacun se retrouve">
-      <TextContent
-        title={`Une pluridisciplinarité au service de votre enfant`}
-        p={`Nos équipes sont composées de personnes ayant développé une expérience dans l’accueil des jeunes enfants.
-
-    La plupart de nos personnels ont une expérience dans l’accueil individuel qui traduit une capacité à accompagner votre enfant de manière individualisée, c’est bien là l’essence de notre projet.`}
-      />
+    <PageLayout
+      page="team"
+      titleh2="Notre equipe"
+      titleh3="Créer une dynamique dans laquelle chacun se retrouve"
+      titleContent={
+        <>
+          Nos équipes sont composées de personnes ayant développé une expérience dans l’accueil des jeunes enfants. La plupart de nos personnels ont
+          une expérience dans l’accueil individuel qui traduit une capacité à accompagner votre enfant de manière individualisée, c’est bien là
+          l’essence de notre projet.
+        </>
+      }
+    >
       <TeamPolaroid list={teamList} />
       <TextContent
         title={`Une équipe investie, un projet solide`}
