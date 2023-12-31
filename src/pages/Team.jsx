@@ -2,10 +2,37 @@ import React from "react";
 import TeamObjectif from "../components/TeamObjectifs";
 import TeamPolaroid from "../components/TeamPolaroid";
 import TextContent from "../components/TextContent";
-import { teamObjectivesList } from "../components/data/teamObjectivesList";
+
 import PageLayout from "../layout/PageLayout";
 
 const Team = () => {
+  const teamObjectivesList = [
+    {
+      id: "01.",
+      icon: "mood",
+      content: `Une qualité de vie au travail, pour s'épanouir professionnellement`,
+      color: "#5692C0",
+    },
+    {
+      id: "02.",
+      icon: "school",
+      content: `des ateliers et formations pour monter en compétences`,
+      color: "#61BBA0",
+    },
+    {
+      id: "03.",
+      icon: "diversity_1",
+      content: `des prises de responsabilités pour être impliqué dans la réussite de la micro-crèche`,
+      color: "#FDD33A",
+    },
+    {
+      id: "04.",
+      icon: "tactic",
+      content: `Des projets à créer !`,
+      color: "#E3998D",
+    },
+  ];
+
   return (
     <PageLayout page="team" titleh2="Notre equipe" titleh3="Créer une dynamique d'équipe dans laquelle chacun se retrouve">
       <TextContent
