@@ -9,6 +9,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+
     // background-attachment: fixed;
     @include verticalCenter;
     flex-direction: column;
@@ -19,14 +20,9 @@
     text-align: center;
     text-shadow: -1px -1px 0 #00000057, 1px -1px 0 #00000057, -1px 1px 0 #00000057, 1px 1px 0 #00000057;
     border-radius: 0% 100% 50% 50% / 75% 47% 53% 25%;
-    // -webkit-clip-path: url(#waveClipPath);
-    // clip-path: url(#waveClipPath);
-    // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.61));
-
-    // mask-image: url(./img/mask/mask5.png);
     overflow: hidden;
-    // mask-repeat: no-repeat;
-    mask-size: 40% 100%;
+    transition: 1s;
+
     @media screen and (max-width: 700px) {
       // border-radius: 0% 0% 25% 20% / 0% 17% 13% 15%;
       width: 100%;
@@ -42,7 +38,7 @@
       bottom: 0;
       left: 0;
       pointer-events: none; /* Pour permettre les clics à travers la vignette */
-      background: radial-gradient(ellipse at center, transparent 20%, rgba(0, 0, 0, 0.6) 100%);
+      background: radial-gradient(ellipse at center, transparent 40%, rgb(0, 0, 0) 100%);
     }
     h2 {
       z-index: 1;

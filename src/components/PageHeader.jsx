@@ -14,6 +14,7 @@ const PageHeader = ({ page, img, titleh2, titleh3 }) => {
           className="header-container"
           style={{
             backgroundImage: `url(./img/page-header/${img})`,
+            filter: `saturate(120%) brightness(100%)`,
           }}
         >
           <h2>{titleh2}</h2>
