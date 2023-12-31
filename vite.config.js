@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": "./src", // Utilisez des chemins relatifs plutôt que des chemins absolus
-      assets: "./src/assets", // Utilisez des chemins relatifs plutôt que des chemins absolus
+      "@": "~/src", // Utilisez des chemins relatifs plutôt que des chemins absolus
+      assets: "~/src/assets", // Utilisez des chemins relatifs plutôt que des chemins absolus
     },
   },
   server: {
