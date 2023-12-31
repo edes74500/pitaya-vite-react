@@ -1,12 +1,12 @@
 import React from "react";
-import { teamList } from "./data/teamList";
+// import { teamList } from "./data/teamList";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer"; // Make sure to import useInView from react-intersection-observer
 
-const TeamPolaroid = (props) => {
+const TeamPolaroid = ({ list }) => {
   const controls = useAnimation();
 
-  const [clickedState, setClickedState] = React.useState(Array(teamList.length).fill(false));
+  const [clickedState, setClickedState] = React.useState(Array(list.length).fill(false));
 
   const [polaroidDivContainer] = useInView({
     triggerOnce: true,
@@ -50,7 +50,7 @@ const TeamPolaroid = (props) => {
   return (
     <>
       <motion.div ref={polaroidDivContainer} className="polaroid-container" variants={container} initial="hidden" animate={controls}>
-        {teamList.map((item, index) => (
+        {list.map((item, index) => (
           <motion.div className={"polaroid-box-hover"} key={item.id} variants={getItemAnim(index)}>
             <figure className="polaroid-frame" onClick={() => handleClick(index)}>
               <div className="effect-shine">
