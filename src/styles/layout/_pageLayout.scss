@@ -1,13 +1,29 @@
 .page-wrapper {
+  // max-width: 1000px;
+  position: relative;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background-image: url(./img/page-header/test.jpg);
+  background-image: url(./img/page-header/team11.png);
+  background-position: top right;
+  background-size: 100vw;
+  @media screen and (max-width: 800px) {
+    background-size: 100vw;
+  }
+  // backdrop-filter: opacity(0.1) !important;
+  // background-color: rgba(227, 224, 204, 0.25);
+  // background-color: black;
+  background-repeat: no-repeat;
   .header-span-container {
     position: absolute;
     top: 0;
-    right: 0;
+    // right: 10%;
     .header-span {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       image-rendering: auto;
-      opacity: 0.4;
+      opacity: 0.35;
       height: 600px;
       width: 600px;
       background-color: red;
@@ -23,8 +39,7 @@
       }
     }
   }
-  position: relative;
-  overflow: hidden;
+
   .footer-span-container {
     position: absolute;
     // color: red;

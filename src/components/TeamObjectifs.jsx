@@ -36,17 +36,19 @@ const TeamObjectifs = (props) => {
   };
 
   return (
-    <motion.div ref={teamActionDiv} className="action-call-container" variants={container} initial="hidden" animate={controls}>
-      {props.list.map((item, index) => (
-        <motion.div className="action-call-item" style={{ color: item.color }} key={index} variants={itemAnim}>
-          <div className="action-call-item-text">
-            <span className="action-call-item-icone material-symbols-outlined">{item.icon}</span>
-            <h3>{item.id}</h3>
-            <p>{item.content}</p>
-          </div>
-        </motion.div>
-      ))}
-    </motion.div>
+    <div className="team-objectif-wrapper" style={{ backgroundColor: "rgba(227, 224, 204, 0.32)" }}>
+      <motion.div ref={teamActionDiv} className="action-call-container" variants={container} initial="hidden" animate={controls}>
+        {props.list.map((item, index) => (
+          <motion.div className="action-call-item" style={{ color: item.color }} key={index} variants={itemAnim}>
+            <div className="action-call-item-text">
+              <span className="action-call-item-icone material-symbols-outlined">{item.icon}</span>
+              <h3>{item.id}</h3>
+              <p>{item.content}</p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
   );
 };
 

@@ -12,13 +12,16 @@
     transform: translate(0%, 0%) !important;
   }
 }
-
+.team-objectif-wrapper {
+  height: 100%;
+  padding: 100px 0;
+}
 .action-call-container {
+  margin: auto;
   font-family: Dosis Variable;
   position: relative;
   min-height: 600px;
-  max-width: 700px;
-  margin: 100px auto;
+  max-width: 900px;
   @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;

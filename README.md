@@ -31,3 +31,4 @@
 - [ ] creer un formulaire d'inscription avec envoi de donnees
 - [ ] Nos Valeurs : changer les valeurs avec des icones ou un carrousel ? https://optitmome.com/ / stacks photo / position sticky
 - [ ] creer un composant gallerie (en map) et un composant image avec possibilite de mettre full screen au click (la taille sera gerer en css plus tard)
+- [ ] installer MUI

@@ -44,32 +44,34 @@ const TextContent = (props) => {
   }, []);
 
   return (
-    <motion.div ref={contentContainer} className="content-container" variants={variants} initial="hidden" animate={controls}>
-      <div className="introduction-container">
-        <h2>{props.title}</h2>
-        <p>{props.p}</p>
-        <span style={{ color: colorString }} className="title-span-2">
-          ● ● ● ●
-        </span>
-        <span style={{ color: colorString }} className="title-span-1">
-          ●
-        </span>
-        <span style={{ color: colorString }} className="div-span-1">
-          ● ● ● ● ● ●
-        </span>
-      </div>
-      {props.img && (
-        <div className="text-content-image-container" style={{ order: props.reverseImg ? -1 : 1 }}>
-          <img src={props.img} alt={props.title} />
-          <span style={{ color: colorString }} className="img-span-1">
+    <div className="content-wrapper" style={{ backgroundColor: "rgba(227, 224, 204, 0.75)" }}>
+      <motion.div className="content-container" ref={contentContainer} variants={variants} initial="hidden" animate={controls}>
+        <div className="introduction-container">
+          <h2>{props.title}</h2>
+          <p>{props.p}</p>
+          <span style={{ color: colorString }} className="title-span-2">
+            ● ● ● ●
+          </span>
+          <span style={{ color: colorString }} className="title-span-1">
             ●
           </span>
-          <span style={{ color: colorString }} className="img-span-2">
-            ●
+          <span style={{ color: colorString }} className="div-span-1">
+            ● ● ● ● ● ●
           </span>
         </div>
-      )}
-    </motion.div>
+        {props.img && (
+          <div className="text-content-image-container" style={{ order: props.reverseImg ? -1 : 1 }}>
+            <img src={props.img} alt={props.title} />
+            <span style={{ color: colorString }} className="img-span-1">
+              ●
+            </span>
+            <span style={{ color: colorString }} className="img-span-2">
+              ●
+            </span>
+          </div>
+        )}
+      </motion.div>
+    </div>
   );
 };
 

@@ -1,9 +1,5 @@
 .nav-wrapper {
   scrollbar-gutter: stable both-edges;
-  // background: rgb(247, 243, 238);
-  // background: whitesmoke;
-  // background-image: linear-gradient(-225deg, #f0fefae0 0%, rgba(255, 249, 255, 0.9) 00%);
-  // box-shadow: -2px 4px 14px rgb(0 0 0 / 21%);
   width: 100%;
   position: fixed;
   justify-content: center;
@@ -11,6 +7,8 @@
   height: 90px;
   z-index: 2000;
   transition: 1s;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   // opacity: 0.9;
 
   .nav-container {
@@ -30,11 +28,12 @@
         font-weight: 500;
         font-size: 1.3rem;
         letter-spacing: 2px;
-        color: #140410bd;
+        color: $navbar_color-link;
         text-decoration: inherit;
         font-family: Dosis Variable;
         position: relative;
         transition: 1s ease-in-out;
+        transition: 0s;
         &:before {
           // ... other styles
           content: "";
@@ -48,26 +47,26 @@
         }
       }
       a:hover {
-        color: $navlink-color-active;
+        color: $navbar_color-link-active;
         &:before {
           content: "";
           position: absolute;
           width: 100%;
           height: 1px;
-          background: $navlink-color-active;
+          background: $navbar_color-link-active;
           bottom: -10px;
           left: 0;
         }
       }
       .is-active {
         position: relative;
-        color: $navlink-color-active;
+        color: $navbar_color-link-active;
         &:before {
           content: "";
           position: absolute;
           width: 100%;
           height: 1px;
-          background: $navlink-color-active;
+          background: $navbar_color-link-active;
           bottom: -10px;
           left: 0;
           // z-index: -1;
@@ -85,6 +84,10 @@
   height: 80px;
   z-index: 2000;
   transition: 1s;
+  a:not(.is-active) {
+    color: $navbar_color-link__scroll;
+    transition: 0s;
+  }
   .logo-text-container {
     opacity: 0;
   }
@@ -166,6 +169,10 @@
     font-size: 3rem !important;
     transition: 0ms;
   }
+  a:not(.is-active) {
+    color: $navbar_color-link__scroll;
+    transition: 0s;
+  }
   .logo-text-container {
     opacity: 0;
   }
@@ -175,6 +182,8 @@
   }
   a {
     display: block;
+    font-size: 1.5rem;
+    margin: 10px;
   }
   a.logo-img {
     pointer-events: none;
@@ -226,7 +235,7 @@
   .navigation-bar {
     width: 28px;
     height: 5px;
-    background-color: rgb(41, 12, 170);
+    background-color: $navbar_color-mobile-hamburger-icon;
     margin: 5px;
     border-radius: 10px;
     transition: 1s;

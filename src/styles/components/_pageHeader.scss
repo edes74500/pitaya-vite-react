@@ -1,28 +1,39 @@
-//big header variable{
-$margin-top: 50px;
-$max-width: 900px;
-$min-heigth: 600px;
+// //big header variable{
+$header_margin-top: 50px;
+$header_max-width: 900px;
+$header_min-heigth: 600px;
+$header_border-radius: 90% 10% 88% 12% / 24% 70% 30% 76%;
+$header_width: 90%;
 
-//smaller header
-$margin-top: 80px;
-$max-width: 500px;
-$min-heigth: 300px;
+// //smaller header
+$header_margin-top: 80px;
+$header_max-width: 400px;
+$header_min-heigth: 300px;
+$header_border-radius: 69% 31% 64% 36% / 28% 60% 40% 72%;
+$header_width: 90%;
+
+// // full page
+// $header_margin-top: 0px;
+// $header_max-width: 100%;
+// $header_min-heigth: 500px;
+// $header_border-radius: 0px;
+// $header_width: 100%;
 
 .header-wrapper {
   display: flex;
   position: relative;
   width: 100%;
-  margin-top: $margin-top;
+  margin-top: $header_margin-top;
   .header-container {
-    width: 90%;
+    width: $header_width;
     max-width: 500px;
-    max-width: $max-width;
+    max-width: $header_max-width;
     justify-content: center;
     margin: auto;
     min-height: 300px;
-    min-height: $min-heigth;
+    min-height: $header_min-heigth;
     background-position: center center;
-    box-shadow: -10px 16px 20px 6px rgb(0 0 0 / 30%);
+    // box-shadow: -10px 16px 20px 6px rgb(0 0 0 / 30%);
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,8 +47,7 @@ $min-heigth: 300px;
     font-variation-settings: "wdth" 75, "wght" 900;
     text-align: center;
     text-shadow: -1px -1px 0 #00000057, 1px -1px 0 #00000057, -1px 1px 0 #00000057, 1px 1px 0 #00000057;
-    border-radius: 90% 10% 88% 12% / 24% 70% 30% 76%;
-    border-radius: 69% 31% 64% 36% / 28% 60% 40% 72%;
+    border-radius: $header_border-radius;
 
     overflow: hidden;
     transition: 1s;
@@ -50,16 +60,16 @@ $min-heigth: 300px;
     }
 
     // fill: "transparent";
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none; /* Pour permettre les clics à travers la vignette */
-      background: radial-gradient(ellipse at center, transparent 40%, rgb(0, 0, 0) 100%);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   pointer-events: none; /* Pour permettre les clics à travers la vignette */
+    //   background: radial-gradient(ellipse at center, transparent 40%, rgb(0, 0, 0) 100%);
+    // }
     h2 {
       z-index: 1;
       font-size: 4rem;

@@ -1,5 +1,5 @@
 import "./styles/index.scss";
-import { BrowserRouter, Route, Routes, ScrollRestoration } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { AnimatePresence } from "framer-motion";
 import Navigation from "./components/navigation/Navigation";

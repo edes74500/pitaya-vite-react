@@ -3,19 +3,20 @@ import PageHeader from "../components/PageHeader";
 import MovingDiv from "../components/common/MovingDiv";
 import PageTitle from "../components/common/PageTitle";
 
-const PageLayout = ({ page, titleh2, titleh3, titleContent, children }) => {
+const PageLayout = ({ page, titleh2, titleh3, titleContent, children, img }) => {
   return (
-    <PageTransition>
-      <div className={`${page}-page-content`}>
-        <div className="page-wrapper">
-          <PageHeader page={page} img={`${page}.jpg`} />
-          <PageTitle page={page} titleh2={titleh2} titleh3={titleh3} titleContent={titleContent} />
+    <div className={`${page}-page-content`}>
+      <div className="page-wrapper">
+        {/* <PageHeader page={page} img={`${page}.jpg`} /> */}
+        {/* <PageHeader page={page} img={`team6.png`} /> */}
+        <PageTransition>
+          <PageTitle page={page} titleh2={titleh2} titleh3={titleh3} titleContent={titleContent} img={img} />
           {children}
-          <MovingDiv position={`footer`} />
-          <MovingDiv position={`header`} />
-        </div>
+        </PageTransition>
+        <MovingDiv position={`footer`} />
+        <MovingDiv position={`header`} />
       </div>
-    </PageTransition>
+    </div>
   );
 };
 
